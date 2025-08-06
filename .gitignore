@@ -9,7 +9,10 @@
 
 .config/fish/fish_variables
 
+.config/gtk-4.0/assets
+.config/gtk-4.0/gtk-dark.css
+.config/gtk-4.0/gtk.css
+
 .config/nvim
 .config/yazi
 .config/tmux
-.tmux/
