@@ -1,11 +1,9 @@
-@import "/home/daniel/.cache/wal/colors-waybar.css";
+@define-color foreground #c9c9bd;
+@define-color background #0d0e0a;
+@define-color background-alt #8c8c84;
 
-@define-color background @color0;
-@define-color background-alt @color8;
-@define-color foreground @color7;
-
-@define-color main @color5;
-@define-color accent @color2;
+@define-color main #95926B;
+@define-color accent #9B2B37;
 
 @define-color text-light @foreground;
 @define-color text-dark @background;
@@ -35,7 +33,7 @@ tooltip label {
   margin: 15px 5px 8px 30px;
   background: @main;
   border-radius: 10px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.65);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .65);
   padding: 2px 6px;
 }
 
@@ -61,7 +59,7 @@ tooltip label {
   border-radius: 10px;
   padding: 0px 10px;
   margin: 15px 5px 8px 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.65);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .65);
   background: @background-alt;
 }
 
@@ -74,7 +72,7 @@ tooltip label {
   background: @accent;
   padding: 0px 10px;
   margin: 15px 5px 8px 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.65);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .65);
 }
 
 /* Component groups */
