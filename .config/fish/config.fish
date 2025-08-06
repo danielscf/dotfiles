@@ -29,4 +29,8 @@ if status is-interactive
   fish_add_path /home/daniel/scripts
   fish_add_path /home/daniel/scripts/script-aliases
   fish_add_path /home/daniel/.local/share/gem/ruby/3.4.0/bin
+
+  # Carapace
+  set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense'
+  carapace _carapace | source
 end

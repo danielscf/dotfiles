@@ -1,4 +1,6 @@
-# Created by newuser for 5.9
+export EDITOR=nvim
+
+# Yazi wrapper
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -7,4 +9,10 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-export EDITOR=nvim
+# Starship
+eval "$(starship init zsh)"
+
+# Carapace
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
