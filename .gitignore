@@ -9,6 +9,8 @@
 
 .config/fish/fish_variables
 
+.config/cava/shaders
+
 .config/gtk-4.0/assets
 .config/gtk-4.0/gtk-dark.css
 .config/gtk-4.0/gtk.css
