@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cp -r ~/.cache/wal/theme-waybar ~/.config/waybar/style.css
+
+killall waybar 
+
+waybar &
