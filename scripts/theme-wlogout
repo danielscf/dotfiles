@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+Y_MONITOR=$(hyprctl -j monitors | jq '.[] | select(.focused==true) | .height')
+
+if [ "$Y_MONITOR" -lt 1080 ]; then
+    # Vertical layout
+    COLUMNS=1
+    wlogout -b "$COLUMNS" \
+        --column-spacing 0 \
+        --row-spacing 0 \
+        --margin 0 \
+        --css ~/.config/wlogout/style_vertical.css
+else
+    # Horizontal layout
+    COLUMNS=5
+    wlogout -b "$COLUMNS" \
+        --column-spacing 0 \
+        --row-spacing 0 \
+        --margin 0 \
+        --css ~/.config/wlogout/style.css
+fi

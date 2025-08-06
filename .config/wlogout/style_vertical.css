@@ -1,0 +1,71 @@
+@import "/home/daniel/.cache/wal/colors-waybar.css";
+
+window {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  animation: gradient_f 20s ease-in infinite;
+
+  background-color: @color0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+
+  border: none;
+  border-style: none;
+  border-width: 0px;
+  border-radius: 20px;
+
+  box-shadow: none;
+  outline-style: none;
+
+  margin: 20px 200px;
+}
+
+button:hover {
+  background-color: @color5;
+  animation: gradient_f 20s ease-in infinite;
+}
+
+#shutdown {
+  background-image: image(url("./icons/poweroff-light.png"));
+}
+#shutdown:hover {
+  background-image: image(url("./icons/poweroff-dark.png"));
+}
+
+#reboot {
+  background-image: image(url("./icons/reboot-light.png"));
+}
+#reboot:hover {
+  background-image: image(url("./icons/reboot-dark.png"));
+}
+
+#lock {
+  background-image: image(url("./icons/lock-light.png"));
+}
+#lock:hover {
+  background-image: image(url("./icons/lock-dark.png"));
+}
+
+#suspend {
+  background-image: image(url("./icons/suspend-light.png"));
+}
+#suspend:hover {
+  background-image: image(url("./icons/suspend-dark.png"));
+}
+
+#hibernate {
+  background-image: image(url("./icons/hibernate-light.png"));
+}
+#hibernate:hover {
+  background-image: image(url("./icons/hibernate-dark.png"));
+}
+
+#logout {
+  background-image: image(url("./icons/logout-light.png"));
+}
+#logout:hover {
+  background-image: image(url("./icons/logout-dark.png"));
+}
