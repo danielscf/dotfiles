@@ -1,0 +1,15 @@
+.config/Electron
+.config/YouTube\ Music/
+.config/dconf
+.config/discord
+.config/easyeffects
+.config/go
+.config/obsidian
+.config/pulse
+
+.config/fish/fish_variables
+
+.config/nvim
+.config/yazi
+.config/tmux
+.tmux/

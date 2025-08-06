@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cp -r ~/.cache/wal/theme-tmux.conf ~/.config/tmux/colors.conf
+tmux source-file ~/.config/tmux/tmux.conf

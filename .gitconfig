@@ -1,0 +1,12 @@
+[user]
+	name = danielscf
+	email = fdanielsantacruz@gmail.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[advice]
+	statusHints = false;
+[status]
+	branch = true;
+	showStash = true;
