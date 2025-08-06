@@ -6,6 +6,7 @@
 .config/go
 .config/obsidian
 .config/pulse
+.config/vlc
 
 .config/fish/fish_variables
 
