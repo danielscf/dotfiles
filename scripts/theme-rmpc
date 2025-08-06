@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cp -r ~/.cache/wal/theme-rmpc ~/.config/rmpc/themes/pywal.ron
