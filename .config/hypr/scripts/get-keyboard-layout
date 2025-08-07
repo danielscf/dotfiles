@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+keyboard_layout=$(hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap')
+
+if [ "$keyboard_layout" = "English (US)" ]; then
+  echo "⌨ EN"
+elif [ "$keyboard_layout" = "Spanish (Latin American)" ]; then
+  echo "⌨ ES"
+fi
