@@ -6,7 +6,7 @@
 [pull]
 	rebase = false
 [advice]
-	statusHints = false;
+	statusHints = false
 [status]
-	branch = true;
-	showStash = true;
+	branch = true
+	showStash = true
