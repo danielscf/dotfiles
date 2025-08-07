@@ -22,6 +22,7 @@ image/jpeg=imv.desktop
 video/mp4=vlc.desktop
 video/x-matroska=vlc.desktop
 audio/mpeg=vlc.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 
 
 [Added Associations]
