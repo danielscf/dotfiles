@@ -1,8 +1,5 @@
 @import "/home/daniel/.cache/wal/colors-waybar.css";
 
-@define-color background @color0;
-@define-color foreground @color7;
-
 @define-color main @color5;
 @define-color accent @color2;
 
@@ -12,11 +9,15 @@
 @define-color bg alpha(@background,.6);
 @define-color bg-hover alpha(@background,.8);
 
+@define-color hover shade(@main, 0.8);
+@define-color hover-alt shade(@accent, 0.8);
+
 @define-color mpris-album-art-overlay alpha(@background, 0.55);
 @define-color mpris-button-hover alpha(@background, 0.50);
 
 * {
   outline: none;
+  font-family: "Noto Sans";
 }
 
 /* CONTROL CENTER */
@@ -37,7 +38,16 @@
   border: none;
 }
 .notification widget:hover {
-  background: alpha(@main, 0.2);
+  background: @hover;
+}
+.notification box:hover {
+  background: @hover;
+}
+.notification.critical widget:hover {
+  background: @hover-alt;
+}
+.notification.critical box:hover {
+  background: @hover-alt;
 }
 .control-center .notification-row {
   background-color: unset;
@@ -58,13 +68,11 @@
   padding-right: 10px;
 }
 .notification-content .text-box .summary {
-  font-family: "${sansSerif.name}";
   font-size: 0.9909rem;
   font-weight: 500;
   color: @text-dark;
 }
 .notification-content .text-box .body {
-  font-family: "${sansSerif.name}";
   font-size: 0.8891rem;
   font-weight: 400;
   margin-top: 0.31rem;
@@ -79,14 +87,29 @@
   padding-right: unset;
   color: @text-dark;
 }
+.notification.critical,
 .notification.critical .notification-content {
   background-color: @accent;
   border: none;
 }
 .control-center .notification-row .close-button,
-.floating-notifications.background .close-button,
 .control-center .notification-row .close-button:hover,
-.floating-notifications.background .close-button:hover {
+.control-center .notification-row .close-button:active,
+.floating-notifications.background .close-button,
+.floating-notifications.background .close-button:hover,
+.floating-notifications.background .close-button:active,
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .close-button,
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .close-button:hover,
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .close-button:active {
   all: unset;
   border: none;
   box-shadow: none;
@@ -103,7 +126,26 @@
 }
 .control-center .notification-row .close-button:hover,
 .floating-notifications.background .close-button:hover {
-  color: @text;
+  color: @text-dark;
+}
+.notification-group,
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+  background: transparent;
+  margin: 4px;
+  padding: 4px;
+}
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification:hover {
+  background-color: @hover;
+}
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification.critical:hover {
+  background-color: @hover-alt;
 }
 
 /* TITLE MODULE */
@@ -222,8 +264,8 @@ trough slider:hover {
 
 /* BUTTONS GRID MODULE */
 .widget-buttons-grid {
-  font-family: "${sansSerif.name}";
   padding: 8px;
+  font-family: "JetBrainsMono Nerd Font Propo";
   margin: 4px 20px 20px 20px;
   border-radius: 12px;
   background-color: transparent;

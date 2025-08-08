@@ -1,8 +1,9 @@
 {
   "positionY": "top",
   "positionX": "right",
+  "cssPriority": "user",
   "control-center-layer": "top",
-  "control-center-width": 320,
+  "control-center-width": 580,
   "control-center-margin-top": 8,
   "control-center-margin-bottom": 8,
   "control-center-margin-right": 16,
@@ -20,7 +21,6 @@
   "layer-shell": true,
   "fit-to-screen": true,
   "keyboard-shortcuts": true,
-  "cssPriority": "application",
   "image-visibility": "when-available",
   "transition-time": 200,
   "hide-on-clear": false,
