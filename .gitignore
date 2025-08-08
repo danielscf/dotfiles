@@ -17,6 +17,7 @@
 
 .config/cava/shaders
 .config/ncspot/userstate.cbor
+.config/QtProject.conf
 
 .config/gtk-4.0/assets
 .config/gtk-4.0/gtk-dark.css
