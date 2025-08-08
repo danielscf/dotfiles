@@ -1,6 +1,7 @@
-.config/Electron
-.config/YouTube\ Music/
 .config/Docker\ Desktop/
+.config/Electron
+.config/Google
+.config/YouTube\ Music/
 .config/dconf
 .config/discord
 .config/easyeffects
