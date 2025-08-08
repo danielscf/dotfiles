@@ -1,0 +1,8 @@
+[Desktop Entry]
+Icon=~/.local/share/applications/rofi-emoji.svg
+Exec=sh -c "$HOME/.config/rofi/emoji/launcher.sh"
+Version=1.0
+Type=Application
+Categories=Application
+Name=Glyph Search
+GenericName=Icon Browser

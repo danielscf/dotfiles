@@ -9,7 +9,7 @@ configuration {
 }
 
 * {
-  font: "JetBrainsMono Nerd Font Propo 13";
+  font: "JetBrainsMono Nerd Font Propo 12";
 }
 
 window {
