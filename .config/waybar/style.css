@@ -1,9 +1,11 @@
-@define-color foreground #c9c9bd;
-@define-color background #0d0e0a;
-@define-color background-alt #8c8c84;
+@import "/home/daniel/.cache/wal/colors-waybar.css";
 
-@define-color main #95926B;
-@define-color accent #9B2B37;
+@define-color foreground @color7;
+@define-color background @color0;
+@define-color background-alt @color8;
+
+@define-color main @color5;
+@define-color accent @color2;
 
 @define-color text-light @foreground;
 @define-color text-dark @background;
@@ -26,7 +28,7 @@ tooltip {
   border-radius: 10px;
 }
 tooltip label {
-  color: @text-dark;
+  color: @text-light;
 }
 
 #workspaces {
