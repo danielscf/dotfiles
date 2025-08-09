@@ -21,6 +21,14 @@
 .config/zoom.conf
 .config/zoomus.conf
 
+.config/wpg/.current
+.config/wpg/samples
+.config/wpg/schemes
+.config/wpg/sequences
+.config/wpg/wallpapers
+.config/wpg/wp_init.sh
+
+
 .config/gtk-4.0/assets
 .config/gtk-4.0/gtk-dark.css
 .config/gtk-4.0/gtk.css
