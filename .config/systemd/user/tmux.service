@@ -7,8 +7,7 @@ Type=forking
 Environment=DISPLAY=:0
 ExecStart=/usr/bin/tmux new-session -d
 
-ExecStop=/home/daniel/.config/tmux/plugins/tmux-resurrect/scripts/save.sh
-ExecStop=/usr/bin/tmux kill-server
+ExecStop=/home/daniel/.config/tmux/plugins/tmux-resurrect/scripts/save.sh && /usr/bin/tmux kill-server
 KillMode=control-group
 
 RestartSec=2
