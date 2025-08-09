@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+ANIMATIONS=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+SHADOW=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+GAPS=$(hyprctl getoption general:gaps_out | awk 'NR==1{print $3}')
+
+if [ "$ANIMATIONS" = 1 -a "$SHADOW" = 1 -a "$GAPS" != 0 ] ; then
+  killall waybar
+
+  sleep 0.5
+  hyprctl --batch "\
+      keyword general:gaps_in 0;\
+      keyword general:gaps_out 0;\
+      keyword decoration:rounding 0"
+
+  sleep 0.5
+  hyprctl --batch "\
+      keyword animations:enabled 0;\
+      keyword decoration:shadow:enabled 0"
+  exit
+fi
+
+if [ "$ANIMATIONS" = 0 -a "$SHADOW" = 0 -a "$GAPS" != 0 ] ; then
+  killall waybar
+
+  sleep 0.5
+  hyprctl --batch "\
+      keyword general:gaps_in 0;\
+      keyword general:gaps_out 0;\
+      keyword decoration:rounding 0"
+  exit
+fi
+
+killall waybar
+waybar &
+
+hyprctl reload

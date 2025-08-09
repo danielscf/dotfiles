@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+ghostty -e "tmux attach | tmux"

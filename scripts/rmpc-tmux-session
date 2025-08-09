@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+ghostty -e "
+  tmux has-session -t media 2>/dev/null || tmux new-session -d -s media "rmpc";
+  tmux set-option -t media status off;
+  tmux attach -t media;
+"
