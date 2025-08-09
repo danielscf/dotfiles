@@ -14,10 +14,11 @@
 .config/vlc
 
 .config/fish/fish_variables
-
 .config/cava/shaders
 .config/ncspot/userstate.cbor
 .config/QtProject.conf
+.config/zoom.conf
+.config/zoomus.conf
 
 .config/gtk-4.0/assets
 .config/gtk-4.0/gtk-dark.css
