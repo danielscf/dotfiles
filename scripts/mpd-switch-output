@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Required `playerctl` `rmpc` `jq` `fzf` `libnotify`
+
+OUTPUT_ID=$(rmpc outputs 2>/dev/null | jq -r '.[] | "\(.id): \(.name)"' | fzf --prompt "Select mpd output: " | cut -d: -f1)
+[[ -z "$OUTPUT_ID" ]] && { echo "No selection made"; exit 1; }
+
+OUTPUT_NAME=$(rmpc outputs 2>/dev/null | jq -r ".[] | select(.id == $OUTPUT_ID) | .name" )
+
+playerctl --all-players pause
+rmpc enableoutput "$OUTPUT_ID"
+
+ALL_OUTPUT_IDS=$(rmpc outputs 2>/dev/null | jq -r '.[].id')
+for ID in "${ALL_OUTPUT_IDS[@]}"; do
+  if [[ "$ID" != "$OUTPUT_ID" ]]; then
+    rmpc disableoutput "$ID"
+  fi
+done
+
+notify-send "MPD Output" "Output changed to $OUTPUT_NAME"
