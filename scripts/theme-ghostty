@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/.config/ghostty/themes
+
+cp -r ~/.cache/wal/theme-ghostty.conf ~/.config/ghostty/themes/pywal

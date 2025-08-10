@@ -2,6 +2,8 @@ font-size = 16
 font-family = "JetbrainsMono Nerd Font"
 font-feature = "-calt, -liga, -dLig"
 
+theme = pywal
+
 resize-overlay = "never"
 confirm-close-surface = false
 

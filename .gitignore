@@ -20,6 +20,7 @@
 .config/QtProject.conf
 .config/zoom.conf
 .config/zoomus.conf
+.config/ghostty/themes/pywal
 
 .config/wpg/.current
 .config/wpg/samples
@@ -27,7 +28,6 @@
 .config/wpg/sequences
 .config/wpg/wallpapers
 .config/wpg/wp_init.sh
-
 
 .config/gtk-4.0/assets
 .config/gtk-4.0/gtk-dark.css
