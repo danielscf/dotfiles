@@ -3,12 +3,12 @@ if status is-interactive
   zoxide init fish | source
 
   # Aliases
-  alias trash="gio trash"
   alias ls="eza -1"
   alias ll="eza -alh"
   alias tree="eza --tree"
   alias cat="bat"
   alias man="batman"
+  alias trash="gio trash"
 
   # Variables
   set -g fish_greeting
@@ -20,6 +20,8 @@ if status is-interactive
   set -gx PIPENV_VENV_IN_PROJECT 1
   set -gx _ZO_MAXAGE 40000
   set -gx _ZO_RESOLVE_SYMLINKS 1
+  set -gx _ZO_FZF_OPTS +s --preview='' --reverse --cycle --no-info --no-separator --no-scrollbar --border=rounded --bind 'tab:toggle-down,shift-tab:toggle-up'
+  set -gx FZF_DEFAULT_OPTS --reverse --cycle --no-info --no-separator --no-scrollbar --border=rounded --bind 'tab:toggle-down,shift-tab:toggle-up'
 
   # Paths
   fish_add_path /usr/bin
