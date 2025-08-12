@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+
+# Show the color current color scheme 
+
+for i in range(0, 16):
+  if i % 8 == 0:
+      print()
+
+  if i > 7:
+      i = "8;5;%s" % i
+
+  print("\033[4%sm%s\033[0m" % (i, " " * (80 // 20)), end="")
+
+print("\n")

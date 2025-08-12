@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+. "${HOME}/.cache/wal/colors.sh"
+
+MESSAGE="<span foreground='$background'>󰝤</span>\
+ <span foreground='$foreground'>󰝤</span>\
+ <span foreground='$color0'>󰝤</span>\
+ <span foreground='$color1'>󰝤</span>\
+ <span foreground='$color2'>󰝤</span>\
+ <span foreground='$color3'>󰝤</span>\
+ <span foreground='$color4'>󰝤</span>\
+ <span foreground='$color5'>󰝤</span>\
+ <span foreground='$color6'>󰝤</span>\
+ <span foreground='$color7'>󰝤</span>\
+ <span foreground='$color8'>󰝤</span>\
+ <span foreground='$color9'>󰝤</span>\
+ <span foreground='$color10'>󰝤</span>\
+ <span foreground='$color11'>󰝤</span>\
+ <span foreground='$color12'>󰝤</span>\
+ <span foreground='$color13'>󰝤</span>\
+ <span foreground='$color14'>󰝤</span>\
+ <span foreground='$color15'>󰝤</span>"
+
+notify-send --urgency low "Color scheme:" "$MESSAGE"
