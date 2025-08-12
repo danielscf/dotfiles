@@ -84,6 +84,7 @@
         "^st$": " st Terminal",
         "code": "󰨞 Visual Studio Code",
         "vscode": "󰨞 VS Code",
+        "code-oss": "󰨞 VS Code",
         "sublime-text": " Sublime Text",
         "atom": " Atom",
         "jetbrains-toolbox": "󰦬 Jetbrains Toolbox",
