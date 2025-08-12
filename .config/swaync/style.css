@@ -6,7 +6,7 @@
 @define-color text @foreground;
 @define-color text-dark @background;
 
-@define-color bg alpha(@background,.6);
+@define-color bg alpha(@background,.75);
 @define-color bg-hover alpha(@background,.8);
 
 @define-color hover shade(@main, 0.8);
