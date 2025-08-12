@@ -57,12 +57,12 @@ button:hover {
   background-image: image(url("./icons/suspend-dark.png"));
 }
 
-#hibernate {
+#logout {
   margin-right: 200px;
-  background-image: image(url("./icons/hibernate-light.png"));
+  background-image: image(url("./icons/logout-light.png"));
 }
-#hibernate:hover {
-  background-image: image(url("./icons/hibernate-dark.png"));
+#logout:hover {
+  background-image: image(url("./icons/logout-dark.png"));
 }
 
 #logout {

@@ -19,7 +19,7 @@
   "keybind" : "u"
 }
 {
-  "label" : "hibernate",
-  "action" : "systemctl hibernate",
-  "keybind" : "h"
+  "label" : "logout",
+  "action" : "uwsm stop",
+  "keybind" : "e"
 }
