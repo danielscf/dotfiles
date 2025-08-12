@@ -1,0 +1,98 @@
+#!/usr/bin/env bash
+
+SCRIPTS_DIR=$HOME/scripts
+WALLPAPERS_DIR=$HOME/Pictures/wallpapers
+
+random-file() {
+  files=("$1"/*)
+  echo "${files[RANDOM % ${#files[@]}]}"
+}
+
+random_wallpaper=$(random-file "$WALLPAPERS_DIR")
+
+echo "$random_wallpaper"
+
+# Default variables
+background="$random_wallpaper"
+animations=true
+notification=true
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -b|--background)
+            background="$2"
+            shift 2
+            ;;
+        -d|--disable-animations)
+            animations=false
+            shift
+            ;;
+        -n|--disable-notification)
+            notification=false
+            shift
+            ;;
+        *)
+            echo "Unknown argument: $1"
+            exit 1
+            ;;
+    esac
+done
+
+set_background() {
+    cp "$background" ~/.cache/wal/wallpaper.png
+
+    if [ "$animations" = true ]; then
+      swww img "$background" \
+        --transition-bezier .43,1.19,1,.4 \
+        --transition-type "grow" \
+        --transition-duration 2 \
+        --transition-fps 60 \
+        --invert-y \
+        --transition-pos "$( hyprctl cursorpos )"
+    else
+      swww img "$background" \
+        --transition-type "none" \
+        --transition-fps 60 \
+        --transition-duration 1
+    fi
+}
+
+generate_color_scheme() {
+    wpg -a "$background" \
+        -ns "$background"
+}
+
+set_app_theme() {
+    "$SCRIPTS_DIR"/theme-swaync
+    echo "Swaync theme ✓"
+
+    "$SCRIPTS_DIR/theme-waybar"
+    echo "Waybar theme ✓"
+
+    "$SCRIPTS_DIR"/theme-ghostty
+    echo "Ghostty theme ✓"
+
+    "$SCRIPTS_DIR"/theme-rmpc
+    echo "Rmpc theme ✓"
+
+    "$SCRIPTS_DIR"/theme-tmux
+    echo "Tmux theme ✓"
+
+    "$SCRIPTS_DIR"/theme-cava
+    echo "Cava theme ✓"
+
+    echo "Rofi theme ✓"
+    echo "Neovim theme ✓"
+}
+
+color_scheme_notification() {
+  if [ "$notification" = true ]; then
+    sleep 0.8
+    "$SCRIPTS_DIR"/cl-notification
+  fi
+}
+
+set_background
+generate_color_scheme
+set_app_theme
+color_scheme_notification
