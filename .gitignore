@@ -26,6 +26,8 @@
 .config/rmpc/themes/pywal.ron
 .config/cava/config
 
+.config/hypr/profiles/default.conf
+
 .config/wpg/.current
 .config/wpg/samples
 .config/wpg/schemes
