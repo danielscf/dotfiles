@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cp -r ~/.cache/wal/theme-cava ~/.config/cava/config
+
+pkill -USR2 cava

@@ -1,0 +1,22 @@
+; Move to ~/.config/cava/config
+
+[general]
+framerate = 144
+
+[input]
+method = pipewire
+source = auto
+
+[color]
+background = default
+foreground = default
+
+gradient = 1
+gradient_color_1 = '#608F94'
+gradient_color_2 = '#9FADA4'
+gradient_color_3 = '#8AB2B6'
+gradient_color_4 = '#B7BBA3'
+gradient_color_5 = '#B1C8BA'
+gradient_color_6 = '#D7D6B2'
+gradient_color_7 = '#c2ded8'
+gradient_color_8 = '#879b97'

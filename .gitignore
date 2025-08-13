@@ -24,6 +24,7 @@
 .config/zoomus.conf
 .config/ghostty/themes/pywal
 .config/rmpc/themes/pywal.ron
+.config/cava/config
 
 .config/wpg/.current
 .config/wpg/samples
