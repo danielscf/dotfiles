@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if ( tmux has-session -t notes 2>/dev/null ); then
+  tmux switch-client -t notes
+else
+  tmux new-session -d -s notes "nvim"
+fi
